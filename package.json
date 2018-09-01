@@ -1,0 +1,48 @@
+{
+  "name": "app",
+  "productName": "App",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "repository": "user/repo",
+  "author": {
+    "name": "Luandro",
+    "email": "luandro@gmail.com",
+    "url": "luandro.com"
+  },
+  "scripts": {
+    "test": "xo",
+    "parcel": "parcel ./src/index.html -d build/",
+    "start-dev": "ELECTRON_START_URL=http://localhost:1234 electron .",
+    "dev": "concurrently 'npm run parcel' 'npm run start-dev' ",
+    "start": "electron .",
+    "build-ui": "parcel build ./src/index.html -d build/ --public-url ./",
+    "build": "npm run build-ui && electron-packager . --out=dist --asar --overwrite --all"
+  },
+  "dependencies": {
+    "apphub-graphql": "0.0.4",
+    "babel-polyfill": "^6.26.0",
+    "choo": "^6.13.0",
+    "choo-devtools": "^2.5.1",
+    "dat-graphql": "0.0.4",
+    "electron-debug": "^2.0.0",
+    "graphql-request": "^1.8.2",
+    "menubar": "^5.2.3",
+    "open-app-graphql-server": "0.0.12",
+    "ssb-graphql-defaults": "^1.0.17"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "devtron": "^1.4.0",
+    "electron": "^2.0.2",
+    "electron-packager": "^12.1.0",
+    "electron-reload": "^1.2.5",
+    "xo": "^0.21.1"
+  },
+  "xo": {
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}
