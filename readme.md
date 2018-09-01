@@ -1,12 +1,12 @@
-# app [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+# App Hub Desktop  [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-> My superb app
+> Open App Ecosystem entry point for Desktop
 
 
 ## Dev
 
 ```
-$ npm install
+$ npm install && npm run dev
 ```
 
 ### Run
@@ -26,4 +26,4 @@ Builds the app for macOS, Linux, and Windows, using [electron-packager](https://
 
 ## License
 
-MIT © [<%= name %>](<%= website %>)
+MIT ©
